@@ -1,0 +1,61 @@
+filetype plugin indent on
+
+" turn on syntax and setting color scheme
+syntax enable
+colorscheme jellybeans 
+
+set backspace=indent,eol,start
+let mapleader=" "
+
+" insert a newline without leaving normal mode
+map <leader>o o<Esc>
+
+
+" default is 50 so it's not much of a difference.
+set history=51
+
+" show the cursor position.
+set ruler
+
+" show incomplete commands at bottom right of screen.
+set showcmd
+
+" scroll to extra content but not too much.
+set scrolloff=5
+
+" turn on line numbering
+set number relativenumber
+
+
+" Better splitview
+set splitbelow splitright
+
+" comments below are for better nav in splits (use if necessary)
+" instead of <ctrl> + w + <whatever direction: h-j-k-l>
+" uncoment below and it will be <cltr> + <h-j-k-l>
+" map <C-h> <C-w>h
+" parenthesis and brackets handler
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+inoremap ` ``<Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+
+" better indenting
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set nocompatible
+
+" lightline config
+set laststatus=2
+let g:lightline = {
+            \ 'colorscheme': 'jellybeans',
+            \}
+
+" vimwiki config
+let g:vimwiki_list = [{'path': '~/vimwik/',
+            \ 'template_path': '~/vimwik/template/',
+            \ 'template_default': 'default',
+            \ 'template_ext': '.html'}]
